@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* Переменные и миксины */
+/* Общие стили */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 122rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: normal;
+  color: #AE7C78;
+  background: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #AE7C78;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:hover, a:focus, a:active {
+  color: #d1574c;
+}
+
+.content-container {
+  margin: 0 auto;
+  width: 120rem;
+  padding: 0 1rem;
+}
+
+/* Стили для header */
+.page-header {
+  margin-top: 2.5rem;
+  padding: 2.2rem 0 2.1rem;
+  border-top: 1px solid #d1574c;
+  border-bottom: 1px solid #d1574c;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list-item:nth-child(6n + 3) {
+  margin-right: 9.5rem;
+}

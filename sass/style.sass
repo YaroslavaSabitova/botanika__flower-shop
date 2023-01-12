@@ -1,0 +1,70 @@
+/* Переменные и миксины */
+    
+$color-white: #ffffff
+$color-black: #000000
+    
+$color-font: #AE7C78
+$color-hover: #d1574c
+
+/* Общие стили */
+    
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    // font-size: 10px
+    // 10px : 16px (по умолчанию) * 100 = 62.5%
+    // для изменения размера шрифта для слабовидящих 
+    font-size: 62.5%
+
+body 
+    min-width: 122rem
+    font-size: 1.6rem
+    line-height: 2rem
+    font-family: "Montserrat", "Arial", sans-serif
+    font-weight: normal
+    color: $color-font
+    background: $color-white
+
+img 
+    max-width: 100%
+    height: auto
+
+a
+    color: $color-font
+    text-decoration: none
+    transition: .3s
+    &:hover, &:focus, &:active
+        color: $color-hover
+
+.content-container
+    margin: 0 auto
+    width: 120rem
+    padding: 0 1rem
+
+/* Стили для header */
+
+.page-header
+    margin-top: 2.5rem
+    padding: 2.2rem 0 2.1rem
+    border-top: 1px solid $color-hover
+    border-bottom: 1px solid $color-hover
+    position: relative
+
+.logo
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.nav-list
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.list-item:nth-child(6n + 3)
+    margin-right: 9.5rem
+
