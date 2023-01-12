@@ -1,7 +1,7 @@
 /* Переменные и миксины */
 
 $color-white: #ffffff
-$color-light-grey:  #a7a7a7
+$color-light-grey: #a7a7a7
 $color-black: #000000
 
 $color-font: #AE7C78
@@ -10,6 +10,9 @@ $color-hover: #d1574c
 $box-shadow: 2px 2px 9px 2px rgba($color-light-grey, 0.60)
 
 $button-and-links: linear-gradient(90deg, rgba( $color-font, .50) 0%, rgba($color-hover, .70) 100%)
+
+@mixin margin
+    margin-bottom: 7rem
 
 /* Общие стили */
 
@@ -43,15 +46,24 @@ a
     transition: .3s
     &:hover, &:focus, &:active
         color: $color-hover
-        
+
 .content-container
     margin: 0 auto
     width: 120rem
     padding: 0 1rem
 
+.heading
+    font-family: "Playfair Display", "Times New Roman", serif
+    transition: .3s
+    letter-spacing: 0.02em
+    margin-top: 0
+    &:hover
+        color: $color-hover
+
 .button
     display: inline-block
     vertical-align: middle
+    font-size: 2rem
     color: $color-white
     padding: 3rem 7rem
     background: $button-and-links
@@ -63,14 +75,15 @@ a
     &:hover, &:active
         opacity: 0.7
         color: $color-white
-    &:focus 
+    &:focus
         color: $color-white
     &:active
         background-color: $color-hover
-    
+
 /* Стили для header */
 
 .page-header
+    @include margin
     margin-top: 2.5rem
     padding: 2.2rem 0 2.1rem
     border-top: 1px solid $color-hover
@@ -95,7 +108,7 @@ a
     transition: all .3s ease
     position: relative
     z-index: 1
-    padding: 1.5rem
+    padding: 1rem
     &::after
         content: ""
         background: $button-and-links
@@ -124,21 +137,17 @@ a
     display: flex
 
 .promo
-    padding: 8.2rem 0 3.1rem 0
+    @include margin
     &-block
         max-width: 38.4rem
         margin-right: 2.3rem
     &-heading
-        font-family: "Playfair Display", "Times New Roman", serif
         font-size: 4.1rem
         font-weight: 400
         line-height: 5.9rem
         margin: 0 0 2.4rem 0
-        transition: .3s
         span
             font-style: italic
-        &:hover
-            color: $color-hover
     &-text
         font-size: 2.4rem
         line-height: 2.9rem
@@ -178,4 +187,37 @@ a
         box-shadow: 0 0 0 2px rgba($color-font, .1), 0 0 10px 10px #fff, 0 0 0 10px rgba($color-font, .5)
         -webkit-transform: scale(1.15)
         transform: scale(1.15)
-        opacity: 0 
+        opacity: 0
+
+/* Стили для advantages */
+
+.advantages
+    @include margin
+    &-heading
+        font-weight: bold
+        font-size: 36px
+        line-height: 48px
+        margin-bottom: 36px
+        text-align: center
+    &-list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 4%
+    &-item
+        display: flex
+        align-items: flex-start
+        &:hover .advantages-image
+            transform: scale(1.1)
+    &-image
+        -webkit-background-clip: text
+        color: transparent
+        font-size: 4.5rem
+        margin-right: 2rem
+        transition: .3s
+    &__block-heading
+        font-size: 1.7rem
+        font-weight: 600
+        line-height: 2rem
+        margin-bottom: .8rem
+
+

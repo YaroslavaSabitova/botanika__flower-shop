@@ -42,9 +42,21 @@ a:hover, a:focus, a:active {
   padding: 0 1rem;
 }
 
+.heading {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  transition: .3s;
+  letter-spacing: 0.02em;
+  margin-top: 0;
+}
+
+.heading:hover {
+  color: #d1574c;
+}
+
 .button {
   display: inline-block;
   vertical-align: middle;
+  font-size: 2rem;
   color: #ffffff;
   padding: 3rem 7rem;
   background: linear-gradient(90deg, rgba(174, 124, 120, 0.5) 0%, rgba(209, 87, 76, 0.7) 100%);
@@ -70,6 +82,7 @@ a:hover, a:focus, a:active {
 
 /* Стили для header */
 .page-header {
+  margin-bottom: 7rem;
   margin-top: 2.5rem;
   padding: 2.2rem 0 2.1rem;
   border-top: 1px solid #d1574c;
@@ -97,7 +110,7 @@ a:hover, a:focus, a:active {
   transition: all .3s ease;
   position: relative;
   z-index: 1;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .item-link::after {
@@ -132,7 +145,7 @@ a:hover, a:focus, a:active {
 }
 
 .promo {
-  padding: 8.2rem 0 3.1rem 0;
+  margin-bottom: 7rem;
 }
 
 .promo-block {
@@ -141,20 +154,14 @@ a:hover, a:focus, a:active {
 }
 
 .promo-heading {
-  font-family: "Playfair Display", "Times New Roman", serif;
   font-size: 4.1rem;
   font-weight: 400;
   line-height: 5.9rem;
   margin: 0 0 2.4rem 0;
-  transition: .3s;
 }
 
 .promo-heading span {
   font-style: italic;
-}
-
-.promo-heading:hover {
-  color: #d1574c;
 }
 
 .promo-text {
@@ -212,4 +219,47 @@ a:hover, a:focus, a:active {
     transform: scale(1.15);
     opacity: 0;
   }
+}
+
+/* Стили для advantages */
+.advantages {
+  margin-bottom: 7rem;
+}
+
+.advantages-heading {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4%;
+}
+
+.advantages-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.advantages-item:hover .advantages-image {
+  transform: scale(1.1);
+}
+
+.advantages-image {
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 4.5rem;
+  margin-right: 2rem;
+  transition: .3s;
+}
+
+.advantages__block-heading {
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 2rem;
+  margin-bottom: .8rem;
 }
