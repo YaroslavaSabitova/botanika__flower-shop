@@ -52,6 +52,10 @@ a
     width: 120rem
     padding: 0 1rem
 
+.content-container-small
+    margin: 0 auto
+    width: 79.5rem
+
 .heading
     font-family: "Playfair Display", "Times New Roman", serif
     transition: .3s
@@ -220,4 +224,20 @@ a
         line-height: 2rem
         margin-bottom: .8rem
 
+/* Стили для popular */
 
+.popular
+    @include margin
+    &-heading
+        font-weight: bold
+        font-size: 36px
+        line-height: 48px
+        margin: 0 0 3.6rem 0
+        text-align: center
+
+.carousel-control-prev, .carousel-control-next
+    width: 30%
+
+.carousel-inner
+    width: 80%
+    margin: 0 auto
