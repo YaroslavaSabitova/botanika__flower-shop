@@ -44,7 +44,7 @@ a:hover, a:focus, a:active {
 
 .content-container-small {
   margin: 0 auto;
-  width: 79.5rem;
+  width: 80.5rem;
 }
 
 .heading {
@@ -56,6 +56,13 @@ a:hover, a:focus, a:active {
 
 .heading:hover {
   color: #d1574c;
+}
+
+.added-heading {
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 4.8rem;
+  text-align: center;
 }
 
 .button {
@@ -83,6 +90,41 @@ a:hover, a:focus, a:active {
 
 .button:active {
   background-color: #d1574c;
+}
+
+.animated-button {
+  transition: all 350ms ease;
+  position: relative;
+}
+
+.animated-button::before {
+  content: '';
+  position: absolute;
+  border-radius: 10rem 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.animated-button:hover::before {
+  animation: sonar-effect .8s ease-out 75ms;
+}
+
+@keyframes sonar-effect {
+  0% {
+    opacity: .3;
+  }
+  40% {
+    opacity: .5;
+    box-shadow: 0 0 0 2px rgba(174, 124, 120, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(174, 124, 120, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(174, 124, 120, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(174, 124, 120, 0.5);
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    opacity: 0;
+  }
 }
 
 /* Стили для header */
@@ -195,52 +237,13 @@ a:hover, a:focus, a:active {
   filter: brightness(1.1) saturate(110%);
 }
 
-.promo-button {
-  transition: all 350ms ease;
-  position: relative;
-}
-
-.promo-button::before {
-  content: '';
-  position: absolute;
-  border-radius: 10rem 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.promo-button:hover::before {
-  animation: sonar-effect .8s ease-out 75ms;
-}
-
-@keyframes sonar-effect {
-  0% {
-    opacity: .3;
-  }
-  40% {
-    opacity: .5;
-    box-shadow: 0 0 0 2px rgba(174, 124, 120, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(174, 124, 120, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 0 2px rgba(174, 124, 120, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(174, 124, 120, 0.5);
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
-    opacity: 0;
-  }
-}
-
 /* Стили для advantages */
 .advantages {
   margin-bottom: 7rem;
 }
 
 .advantages-heading {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 48px;
-  margin-bottom: 36px;
-  text-align: center;
+  margin-bottom: 3.6rem;
 }
 
 .advantages-list {
@@ -279,18 +282,71 @@ a:hover, a:focus, a:active {
 }
 
 .popular-heading {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 48px;
-  margin: 0 0 3.6rem 0;
-  text-align: center;
+  margin-bottom: 3.6rem;
 }
 
-.carousel-control-prev, .carousel-control-next {
-  width: 30%;
+.popular-slide-block {
+  max-width: 38.7rem;
+  margin-right: 2rem;
+  padding-top: 2.6rem;
+}
+
+.popular-slide-heading {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  margin-bottom: 2rem;
+}
+
+.popular-slide-heading_price {
+  margin-bottom: 6.5rem;
+}
+
+.popular-slide-text {
+  margin-bottom: 2.4rem;
+}
+
+.popular-slide-button {
+  padding: 3rem 10.7rem;
 }
 
 .carousel-inner {
-  width: 80%;
+  width: 100%;
+  min-height: 50rem;
   margin: 0 auto;
+}
+
+.carousel-item {
+  padding: 0 0 1.5rem 3rem;
+}
+
+.carousel-item img {
+  width: 38.7rem !important;
+  height: 43.8rem !important;
+  position: absolute;
+  top: .3rem;
+  right: -1.5rem;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 10%;
+  bottom: -47.5rem;
+}
+
+.carousel-control-next {
+  right: 32.5rem;
+}
+
+.carousel-control-next-icon {
+  background-image: url("icon/arrow-right.svg");
+  width: 7rem;
+}
+
+.carousel-control-prev {
+  left: 28rem;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("icon/arrow-left.svg");
+  width: 7rem;
 }
