@@ -43,7 +43,7 @@ img
 a
     color: $color-font
     text-decoration: none
-    transition: .3s
+    transition: .3s ease-in-out
     &:hover, &:focus, &:active
         color: $color-hover
 
@@ -58,7 +58,7 @@ a
 
 .heading
     font-family: "Playfair Display", "Times New Roman", serif
-    transition: .3s
+    transition: .5s ease-in-out
     letter-spacing: 0.02em
     margin-top: 0
     &:hover
@@ -69,7 +69,6 @@ a
     font-size: 3.5rem
     line-height: 4.8rem
     text-align: center
-
 
 .button
     display: inline-block
@@ -110,9 +109,9 @@ a
         opacity: .3
     40%
         opacity: .5
-        box-shadow: 0 0 0 2px rgba($color-font, .1), 0 0 10px 10px #fff, 0 0 0 10px rgba($color-font, .5)
+        box-shadow: 0 0 0 2px rgba($color-font, .1), 0 0 10px 10px $color-white, 0 0 0 10px rgba($color-font, .5)
     100%
-        box-shadow: 0 0 0 2px rgba($color-font, .1), 0 0 10px 10px #fff, 0 0 0 10px rgba($color-font, .5)
+        box-shadow: 0 0 0 2px rgba($color-font, .1), 0 0 10px 10px $color-white, 0 0 0 10px rgba($color-font, .5)
         -webkit-transform: scale(1.15)
         transform: scale(1.15)
         opacity: 0
@@ -208,7 +207,7 @@ a
 .advantages
     @include margin
     &-heading
-        margin-bottom: 3.6rem
+        margin-bottom: 4rem
     &-list
         display: grid
         grid-template-columns: repeat(3, 1fr)
@@ -235,7 +234,7 @@ a
 .popular
     @include margin
     &-heading
-        margin-bottom: 3.6rem
+        margin-bottom: 4rem
     &-slide-block
         max-width: 38.7rem
         margin-right: 2rem
@@ -268,18 +267,73 @@ a
 
 .carousel-control-prev, .carousel-control-next
     width: 10%
-    bottom: -47.5rem
+    height: 10%
+    top: 44.5rem
 
 .carousel-control-next
-    right: 32.5rem
+    right: 30.5rem
     &-icon
         background-image: url("icon/arrow-right.svg")
         width: 7rem
 
 .carousel-control-prev
-    left: 28rem
+    left: 29.5rem
     &-icon
         background-image: url("icon/arrow-left.svg")
         width: 7rem
 
+/* Стили для type */
 
+.type
+    @include margin
+    &-heading
+        margin-bottom: 4rem
+    &-list
+        list-style: none
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 44.2rem
+        column-gap: 4rem
+    &-item
+        border-radius: 10rem 0
+        box-shadow: $box-shadow
+    &-text
+        color: $color-white
+        font-size: 1.8rem
+    &-link
+        height: 100%
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        background: rgba(174, 124, 120, 0.4)
+        background-size: cover
+        border-radius: 10rem 0
+        padding: 2rem
+        box-sizing: border-box
+        transition: .5s ease-in-out
+        &:hover
+            background: rgba(174, 124, 120, 0.6)
+        &:active
+            background: rgba(174, 124, 120, 0.8)
+
+.type-item:nth-child(1)
+    background: url(../img/select-1.jpg) center/cover no-repeat
+
+.type-item:nth-child(2)
+    background: url(../img/select-2.jpg) center/cover no-repeat
+
+.type-item:nth-child(3)
+    background: url(../img/select-3.jpg) center/cover no-repeat
+
+.item-heading
+    color: $color-white
+    font-size: 3.2rem
+    margin-bottom: 4rem
+    font-family: "Playfair Display", "Times New Roman", serif
+    letter-spacing: 0.02em
+
+/* Стили для sale */
+
+    

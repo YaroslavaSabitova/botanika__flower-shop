@@ -29,7 +29,7 @@ img {
 a {
   color: #AE7C78;
   text-decoration: none;
-  transition: .3s;
+  transition: .3s ease-in-out;
 }
 
 a:hover, a:focus, a:active {
@@ -49,7 +49,7 @@ a:hover, a:focus, a:active {
 
 .heading {
   font-family: "Playfair Display", "Times New Roman", serif;
-  transition: .3s;
+  transition: .5s ease-in-out;
   letter-spacing: 0.02em;
   margin-top: 0;
 }
@@ -117,10 +117,10 @@ a:hover, a:focus, a:active {
   }
   40% {
     opacity: .5;
-    box-shadow: 0 0 0 2px rgba(174, 124, 120, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(174, 124, 120, 0.5);
+    box-shadow: 0 0 0 2px rgba(174, 124, 120, 0.1), 0 0 10px 10px #ffffff, 0 0 0 10px rgba(174, 124, 120, 0.5);
   }
   100% {
-    box-shadow: 0 0 0 2px rgba(174, 124, 120, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(174, 124, 120, 0.5);
+    box-shadow: 0 0 0 2px rgba(174, 124, 120, 0.1), 0 0 10px 10px #ffffff, 0 0 0 10px rgba(174, 124, 120, 0.5);
     -webkit-transform: scale(1.15);
     transform: scale(1.15);
     opacity: 0;
@@ -243,7 +243,7 @@ a:hover, a:focus, a:active {
 }
 
 .advantages-heading {
-  margin-bottom: 3.6rem;
+  margin-bottom: 4rem;
 }
 
 .advantages-list {
@@ -282,7 +282,7 @@ a:hover, a:focus, a:active {
 }
 
 .popular-heading {
-  margin-bottom: 3.6rem;
+  margin-bottom: 4rem;
 }
 
 .popular-slide-block {
@@ -330,11 +330,12 @@ a:hover, a:focus, a:active {
 
 .carousel-control-prev, .carousel-control-next {
   width: 10%;
-  bottom: -47.5rem;
+  height: 10%;
+  top: 44.5rem;
 }
 
 .carousel-control-next {
-  right: 32.5rem;
+  right: 30.5rem;
 }
 
 .carousel-control-next-icon {
@@ -343,10 +344,82 @@ a:hover, a:focus, a:active {
 }
 
 .carousel-control-prev {
-  left: 28rem;
+  left: 29.5rem;
 }
 
 .carousel-control-prev-icon {
   background-image: url("icon/arrow-left.svg");
   width: 7rem;
 }
+
+/* Стили для type */
+.type {
+  margin-bottom: 7rem;
+}
+
+.type-heading {
+  margin-bottom: 4rem;
+}
+
+.type-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 44.2rem;
+  column-gap: 4rem;
+}
+
+.type-item {
+  border-radius: 10rem 0;
+  box-shadow: 2px 2px 9px 2px rgba(167, 167, 167, 0.6);
+}
+
+.type-text {
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.type-link {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(174, 124, 120, 0.4);
+  background-size: cover;
+  border-radius: 10rem 0;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: .5s ease-in-out;
+}
+
+.type-link:hover {
+  background: rgba(174, 124, 120, 0.6);
+}
+
+.type-link:active {
+  background: rgba(174, 124, 120, 0.8);
+}
+
+.type-item:nth-child(1) {
+  background: url(../img/select-1.jpg) center/cover no-repeat;
+}
+
+.type-item:nth-child(2) {
+  background: url(../img/select-2.jpg) center/cover no-repeat;
+}
+
+.type-item:nth-child(3) {
+  background: url(../img/select-3.jpg) center/cover no-repeat;
+}
+
+.item-heading {
+  color: #ffffff;
+  font-size: 3.2rem;
+  margin-bottom: 4rem;
+  font-family: "Playfair Display", "Times New Roman", serif;
+  letter-spacing: 0.02em;
+}
+
+/* Стили для sale */
