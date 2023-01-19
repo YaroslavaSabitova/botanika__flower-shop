@@ -49,20 +49,21 @@ a:hover, a:focus, a:active {
 
 .heading {
   font-family: "Playfair Display", "Times New Roman", serif;
-  transition: .5s ease-in-out;
-  letter-spacing: 0.02em;
-  margin-top: 0;
-}
-
-.heading:hover {
-  color: #d1574c;
-}
-
-.added-heading {
   font-weight: bold;
   font-size: 3.5rem;
   line-height: 4.8rem;
+  letter-spacing: 0.02em;
   text-align: center;
+  margin-top: 0;
+}
+
+.animated-heading {
+  transition: .5s ease-in-out;
+  letter-spacing: 0.02em;
+}
+
+.animated-heading:hover {
+  color: #d1574c;
 }
 
 .button {
@@ -154,7 +155,7 @@ a:hover, a:focus, a:active {
 .item-link {
   padding: 1rem;
   border: none;
-  transition: all .3s ease;
+  transition: all .3s ease 0s;
   position: relative;
   z-index: 1;
   padding: 1rem;
@@ -201,14 +202,14 @@ a:hover, a:focus, a:active {
 
 .promo-block {
   max-width: 38.4rem;
-  margin-right: 2.3rem;
+  margin-right: 2rem;
 }
 
 .promo-heading {
-  font-size: 4.1rem;
+  margin-bottom: 5rem;
+  font-size: 4rem;
   font-weight: 400;
-  line-height: 5.9rem;
-  margin: 0 0 2.4rem 0;
+  text-align: left;
 }
 
 .promo-heading span {
@@ -230,7 +231,7 @@ a:hover, a:focus, a:active {
 }
 
 .promo-image:nth-of-type(1) {
-  margin: 6rem 2rem 0 0;
+  margin: 6rem 4rem 0 0;
 }
 
 .promo-image:hover {
@@ -243,7 +244,7 @@ a:hover, a:focus, a:active {
 }
 
 .advantages-heading {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .advantages-list {
@@ -271,7 +272,7 @@ a:hover, a:focus, a:active {
 
 .advantages__block-heading {
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 2rem;
   margin-bottom: .8rem;
 }
@@ -282,7 +283,7 @@ a:hover, a:focus, a:active {
 }
 
 .popular-heading {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .popular-slide-block {
@@ -354,11 +355,11 @@ a:hover, a:focus, a:active {
 
 /* Стили для type */
 .type {
-  margin-bottom: 7rem;
+  margin-bottom: 9rem;
 }
 
 .type-heading {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .type-list {
@@ -423,3 +424,40 @@ a:hover, a:focus, a:active {
 }
 
 /* Стили для sale */
+.sale {
+  margin-bottom: 7rem;
+}
+
+.sale-heading {
+  margin-bottom: 5rem;
+  font-size: 4rem;
+  text-align: left;
+}
+
+.sale-block {
+  display: flex;
+  justify-content: space-between;
+  background-color: #AE7C78;
+  box-shadow: 2px 2px 9px 2px rgba(167, 167, 167, 0.6);
+}
+
+.sale-block__text {
+  color: #ffffff;
+  padding: 4rem 2.2rem 6.4rem 10.2rem;
+}
+
+.sale-text {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: #ffffff;
+  margin: 0;
+  max-width: 38.7rem;
+}
+
+.sale-image {
+  transition: .3s ease;
+}
+
+.sale-image:hover {
+  filter: brightness(1.1) saturate(120%);
+}
