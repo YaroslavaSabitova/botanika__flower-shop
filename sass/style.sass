@@ -1,15 +1,16 @@
 /* Переменные и миксины */
 
 $color-white: #ffffff
-$color-light-grey: #a7a7a7
+$color-light-grey: #f4f4f4
 $color-black: #000000
 
 $color-font: #AE7C78
 $color-hover: #d1574c
 
-$box-shadow: 2px 2px 9px 2px rgba($color-light-grey, 0.60)
+$header-buttonUp-shadow: 0 2px 6px rgba($color-black, 0.2)
+$box-shadow: 2px 2px 9px 2px rgba($color-light-grey, 0.6)
 
-$button-and-links: linear-gradient(90deg, rgba( $color-font, .50) 0%, rgba($color-hover, .70) 100%)
+$button-and-links: linear-gradient(90deg, rgba( $color-font, .5) 0%, rgba($color-hover, .7) 100%)
 
 @mixin margin-block
     margin-bottom: 7rem
@@ -45,6 +46,11 @@ body
     font-weight: normal
     color: $color-font
     background: $color-white
+    position: relative
+
+.start
+    position: absolute
+    top: 0
 
 img
     max-width: 100%
@@ -142,10 +148,9 @@ a
     left: 0
     width: 100%
     background-color: #ffffff
-    box-shadow: 0 4px 10px rgba(135, 135, 135, 0.1)
+    box-shadow: $header-buttonUp-shadow
     z-index: 100
     padding: 2.2rem 0 2.1rem
-    border-top: 1px solid $color-hover
     border-bottom: 1px solid $color-hover
 
 .logo
@@ -192,12 +197,10 @@ a
 .list-item:nth-child(6n + 4)
     margin-left: 17rem
 
-
 /* Стили для main-page */
 
 .main-page
     padding-top: 15rem
-
 
 /* Стили для promo */
 
@@ -469,3 +472,47 @@ a
     &-heading
         @include margin-heading
 
+/* Стили для page-footer */
+
+.visually-hidden
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    border: 0
+    padding: 0
+    white-space: nowrap
+    clip-path: inset(100%)
+    clip: rect(0 0 0 0)
+    overflow: hidden
+
+.scroll-up-link
+    display: none
+    position: fixed
+    bottom: 140px
+    right: 40px
+    width: 52px
+    height: 52px
+    box-shadow: $header-buttonUp-shadow
+    border-radius: 30px
+    background-color: $color-light-grey
+    opacity: 0
+    &::before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 16px
+        height: 8px
+        transform: translate(-50%, -50%)
+        background: url(../icon/arrow.svg) center/contain no-repeat
+
+.scroll-up-link-showed
+    display: block
+    animation: btn-showing .7s linear forwards
+
+@keyframes btn-showing
+    0%
+        opacity: 0
+    100%
+        opacity: 1

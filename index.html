@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="css/icon-font.css">
 </head>
 <body>
-    <header class="page-header">
+    <div class="start" id="start">
+        <span class="visually-hidden">Начало страницы</span>
+    </div>
+
+    <header class="page-header" >
         <div class="content-container">
             <a href="index.html" class="logo">
                 <img src="icon/logo.svg" alt="Логотип магазина цветов Botanika" width="130" height="55">
@@ -351,8 +355,16 @@
 
 
     </main>
+
+    <footer class="page-footer">
+        <a href="#start" class="scroll-up-link scroll-up-link-showed">
+            <span class="visually-hidden">Вернуться в начало</span>
+        </a>
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
