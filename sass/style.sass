@@ -137,11 +137,16 @@ a
 
 .page-header
     @include margin-block
-    margin-top: 2.5rem
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background-color: #ffffff
+    box-shadow: 0 4px 10px rgba(135, 135, 135, 0.1)
+    z-index: 100
     padding: 2.2rem 0 2.1rem
     border-top: 1px solid $color-hover
     border-bottom: 1px solid $color-hover
-    position: relative
 
 .logo
     position: absolute
@@ -186,6 +191,13 @@ a
 
 .list-item:nth-child(6n + 4)
     margin-left: 17rem
+
+
+/* Стили для main-page */
+
+.main-page
+    padding-top: 15rem
+
 
 /* Стили для promo */
 
@@ -429,7 +441,7 @@ a
     box-sizing: border-box
 
 .feedback
-    @include margin-block
+    @include margin-heading
     &-heading
         margin-bottom: 3rem
     &-list
@@ -445,9 +457,15 @@ a
             color: $color-hover
     img
         margin-bottom: 2rem
-        filter: grayscale(0)
+        filter: grayscale(10%)
         transition: .5s ease-in-out
     blockquote
         margin-bottom: 3rem
 
-    
+/* Стили для map */
+
+.map
+    @include margin-block
+    &-heading
+        @include margin-heading
+
