@@ -81,6 +81,12 @@ a
     &:hover
         color: $color-hover
 
+.subheading
+    font-size: 1.9rem
+    font-weight: 500
+    margin-bottom: 2rem
+    transition: .5s ease-in-out
+
 .button
     display: inline-block
     vertical-align: middle
@@ -228,6 +234,8 @@ a
         align-items: flex-start
         &:hover .advantages-image
             transform: scale(1.1)
+        &:hover .advantages__block-heading
+            color: $color-hover
     &-image
         @include icon
     &__block-heading
@@ -354,13 +362,11 @@ a
         align-items: center
         &:hover .steps-icon
             transform: scale(1.1)
+        &:hover .subheading
+            color: $color-hover
     &-icon
         @include icon
-        margin: 0 0 1rem 0
-    &-subheading
-        font-size: 1.9rem
-        font-weight: 500
-        margin-bottom: 1rem
+        margin: 0 0 2rem 0
 
 /* Стили для type */
 
@@ -413,3 +419,35 @@ a
     margin-bottom: 4rem
     font-family: "Playfair Display", "Times New Roman", serif
     letter-spacing: 0.02em
+
+/* Стили для reviews */
+
+.feedback .content-container
+    border: 2px solid $color-font
+    border-radius: 10rem 0
+    padding: 4rem 4.4rem 5rem
+    box-sizing: border-box
+
+.feedback
+    @include margin-block
+    &-heading
+        margin-bottom: 3rem
+    &-list
+        list-style: none
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 10rem
+    &-item
+        text-align: center
+        &:hover img
+            filter: grayscale(27%) brightness(1.12)
+        &:hover cite
+            color: $color-hover
+    img
+        margin-bottom: 2rem
+        filter: grayscale(0)
+        transition: .5s ease-in-out
+    blockquote
+        margin-bottom: 3rem
+
+    

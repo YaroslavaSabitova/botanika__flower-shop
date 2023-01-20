@@ -66,6 +66,13 @@ a:hover, a:focus, a:active {
   color: #d1574c;
 }
 
+.subheading {
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  transition: .5s ease-in-out;
+}
+
 .button {
   display: inline-block;
   vertical-align: middle;
@@ -262,6 +269,10 @@ a:hover, a:focus, a:active {
   transform: scale(1.1);
 }
 
+.advantages-item:hover .advantages__block-heading {
+  color: #d1574c;
+}
+
 .advantages-image {
   -webkit-background-clip: text;
   color: transparent;
@@ -445,19 +456,17 @@ a:hover, a:focus, a:active {
   transform: scale(1.1);
 }
 
+.steps-item:hover .subheading {
+  color: #d1574c;
+}
+
 .steps-icon {
   -webkit-background-clip: text;
   color: transparent;
   font-size: 4.5rem;
   margin-right: 2rem;
   transition: .3s;
-  margin: 0 0 1rem 0;
-}
-
-.steps-subheading {
-  font-size: 1.9rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
+  margin: 0 0 2rem 0;
 }
 
 /* Стили для type */
@@ -528,4 +537,49 @@ a:hover, a:focus, a:active {
   margin-bottom: 4rem;
   font-family: "Playfair Display", "Times New Roman", serif;
   letter-spacing: 0.02em;
+}
+
+/* Стили для reviews */
+.feedback .content-container {
+  border: 2px solid #AE7C78;
+  border-radius: 10rem 0;
+  padding: 4rem 4.4rem 5rem;
+  box-sizing: border-box;
+}
+
+.feedback {
+  margin-bottom: 7rem;
+}
+
+.feedback-heading {
+  margin-bottom: 3rem;
+}
+
+.feedback-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10rem;
+}
+
+.feedback-item {
+  text-align: center;
+}
+
+.feedback-item:hover img {
+  filter: grayscale(27%) brightness(1.12);
+}
+
+.feedback-item:hover cite {
+  color: #d1574c;
+}
+
+.feedback img {
+  margin-bottom: 2rem;
+  filter: grayscale(0);
+  transition: .5s ease-in-out;
+}
+
+.feedback blockquote {
+  margin-bottom: 3rem;
 }
