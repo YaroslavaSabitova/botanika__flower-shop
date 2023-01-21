@@ -418,20 +418,20 @@ img {
 .sale-text span::before {
   content: "";
   position: absolute;
-  width: 105%;
-  left: -3%;
-  height: .4rem;
+  width: 104%;
+  left: -2%;
+  height: .2rem;
   z-index: -2;
-  bottom: -4px;
+  bottom: -1.5px;
   background: #d1574c;
   transition: all .3s ease;
 }
 
 .sale-text span:hover::before {
-  bottom: -4px;
+  bottom: -1.5px;
   height: 3.5rem;
-  width: 105%;
-  left: -3%;
+  width: 104%;
+  left: -2%;
 }
 
 .sale-image {
@@ -686,6 +686,11 @@ img {
 .scroll-up-link-showed {
   display: block;
   animation: btn-showing .7s linear forwards;
+  transition: .5s ease-in-out;
+}
+
+.scroll-up-link-showed:hover {
+  background-color: rgba(174, 124, 120, 0.3);
 }
 
 @keyframes btn-showing {
@@ -735,7 +740,7 @@ img {
   position: absolute;
   width: 115%;
   left: -6%;
-  height: .4rem;
+  height: .2rem;
   z-index: -2;
   bottom: -5px;
   background: #d1574c;
