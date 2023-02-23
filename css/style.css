@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/* Переменные и миксины */
-/* Общие стили */
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -48,7 +46,7 @@ img {
 }
 
 .heading {
-  font-family: "Playfair Display", "Times New Roman", serif;
+  font-family: "Times New Roman", serif;
   font-weight: bold;
   font-size: 3.5rem;
   line-height: 4.8rem;
